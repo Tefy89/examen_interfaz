@@ -1,0 +1,197 @@
+<p-tabMenu [model]="items" />
+<br>
+<!-- Carrusel -->
+<div class="carrusel">
+    <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions"
+        [circular]="true">
+        <ng-template let-product pTemplate="item">
+            <div class="product-item p-0 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <!-- Imagen del producto -->
+                <div class="image-container overflow-hidden rounded-lg">
+                    <img [src]="product.image" [alt]="product.name"
+                        class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300" />
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+
+<div class="matrices">
+    <div class="p-grid p-justify-center p-align-center section-icons">
+        <!-- Café de Especialidad -->
+        <div class="p-col-12 p-md-3 p-lg-2 p-text-center service-box">
+            <i class="pi pi-star icon"></i>
+            <h3>Café de Especialidad</h3>
+            <p class="parrafo">Disfruta de los mejores granos seleccionados, tostados para perfeccionar el sabor.</p>
+        </div>
+
+        <!-- Tés Artesanales -->
+        <div class="p-col-12 p-md-3 p-lg-2 p-text-center service-box">
+            <i class="pi pi-book icon"></i>
+            <h3>Tés Artesanales</h3>
+            <p class="parrafo">Explora nuestra selección de tés únicos y naturales.</p>
+        </div>
+
+        <!-- Pastelería -->
+        <div class="p-col-12 p-md-3 p-lg-2 p-text-center service-box">
+            <i class="pi pi-heart icon"></i>
+            <h3>Pastelería</h3>
+            <p class="parrafo">Acompaña tu bebida con nuestras delicias horneadas.</p>
+        </div>
+
+        <!-- Ambiente Acogedor -->
+        <div class="p-col-12 p-md-3 p-lg-2 p-text-center service-box">
+            <i class="pi pi-home icon"></i>
+            <h3>Ambiente Acogedor</h3>
+            <p class="parrafo">Un lugar para relajarte, trabajar o reunirte con amigos.</p>
+        </div>
+
+        <!-- Eventos Especiales -->
+        <div class="p-col-12 p-md-3 p-lg-2 p-text-center service-box">
+            <i class="pi pi-calendar icon"></i>
+            <h3>Eventos Especiales</h3>
+            <p class="parrafo">Organizamos catas de café y celebraciones únicas.</p>
+        </div>
+    </div>
+
+
+
+</div>
+<!-- Contenedor uno-imagen -->
+
+<div class="container">
+    <div class="image-section">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/04/31/caffeine-1867326_1280.jpg" alt="Imagen cafeteria"
+            class="image">
+    </div>
+    <div class="text-section">
+        <h1>COFFEE AND TEA <!-- icon666.com - MILLIONS vector ICONS FREE --><svg viewBox="0 0 64 64"
+                style="width: 30px;" xmlns="http://www.w3.org/2000/svg">
+                <g id="coffe">
+                    <path
+                        d="m27.47 24.27a1 1 0 0 1 -.6-.2 1 1 0 0 1 -.21-1.4 5.81 5.81 0 0 0 0-6.8 6.05 6.05 0 0 1 -1.49-4.67 4.3 4.3 0 0 1 1.7-2.76 1 1 0 0 1 1.13 1.65 2.33 2.33 0 0 0 -.86 1.47 4.24 4.24 0 0 0 1.11 3.1 7.75 7.75 0 0 1 0 9.2 1 1 0 0 1 -.78.41z" />
+                    <path
+                        d="m20.47 23.31a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41 3.74 3.74 0 0 0 .83-2 3 3 0 0 0 -.85-2.61 3.71 3.71 0 0 1 0-5.41 1 1 0 0 1 1.4 1.41 1.73 1.73 0 0 0 0 2.59c2.48 2.46 1.36 6.08 0 7.41a1 1 0 0 1 -.67.31z" />
+                    <path
+                        d="m35.47 23.23a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41 3.67 3.67 0 0 0 .83-2 3 3 0 0 0 -.84-2.56 3.71 3.71 0 0 1 0-5.41 1 1 0 0 1 1.43 1.4 1.73 1.73 0 0 0 0 2.59c2.48 2.46 1.36 6.08 0 7.42a1 1 0 0 1 -.71.26z" />
+                    <path
+                        d="m46.37 28.9a3 3 0 0 1 .12.79v1.29a7 7 0 0 1 -1.94 13.72 6.66 6.66 0 0 1 -2-.3q-.56.9-1.17 1.74a9 9 0 1 0 5-17.24z" />
+                    <path
+                        d="m42 51h-9.26c6.85-2.86 11.79-11.21 11.75-21a1 1 0 0 0 -1-1l-32 .12a1 1 0 0 0 -1 1c0 9.76 5 18 11.83 20.89h-9.32a1 1 0 0 0 0 2h29a1 1 0 0 0 0-2z" />
+                </g>
+            </svg></h1>
+        <h2>Bienvenidos a Nuestra Cafetería</h2>
+        <p>Si buscas un lugar acogedor para disfrutar de café premium y deliciosos pasteles, estás en el lugar indicado.
+            Nuestros expertos baristas están aquí para preparar la taza de café perfecta para ti, junto con productos
+            horneados frescos para complementar tu experiencia.</p>
+        <ul>
+            <li>Descubre nuestras mezclas de espresso exclusivas.</li>
+            <li>Prueba nuestros deliciosos pasteles veganos y sin gluten.</li>
+            <li>Disfruta de un ambiente relajante con Wi-Fi gratis y música en vivo los fines de semana.</li>
+        </ul>
+    </div>
+</div>
+<!-- Tarjetas y botones -->
+<div class="cards" style="width:100%;">
+    <div class="card flex">
+        <p-card header="Combo Especial: Café + Pastel" subheader="Ahorra con nuestras ofertas"
+            [style]="{ width: '360px' }">
+            <ng-template pTemplate="header">
+                <img alt="Combo Café Pastel"
+                    src="https://cdn.pixabay.com/photo/2021/02/17/14/29/coffee-6024401_1280.jpg" />
+            </ng-template>
+            <p>
+                ¡Disfruta de nuestro combo especial! Un delicioso café acompañado de tu pastel favorito por solo $5.
+                ¡Una oferta irresistible!
+            </p>
+
+            <div class="more-info-btn">
+                <button pButton pRipple label="Mirar Productos" routerLink="/productos"
+                    class="p-button p-component p-button-outlined"
+                    style="background-color: rgb(48, 68, 75);color:white"></button>
+            </div>
+
+        </p-card>
+    </div>
+
+    <div class="card flex">
+        <p-card header="Café Espresso" subheader="Nuestro café más fuerte" [style]="{ width: '360px' }">
+            <ng-template pTemplate="header">
+                <img alt="Café Espresso" src="https://cdn.pixabay.com/photo/2017/04/11/03/52/coffee-2220484_1280.jpg" />
+            </ng-template>
+            <p>
+                Disfruta de un delicioso café espresso, hecho con granos seleccionados para un sabor intenso y lleno de
+                energía. Perfecto para los amantes del café fuerte.
+            </p>
+
+            <div class="more-info-btn">
+                <button pButton pRipple label="Conoce más de nosotros" routerLink="/quienesomos"
+                    class="p-button p-component p-button-outlined"
+                    style="background-color: rgb(48, 68, 75);color:white"></button>
+            </div>
+
+        </p-card>
+    </div>
+
+    <div class="card flex">
+        <p-card header="Sobre Coffee and Tea" subheader="Tu lugar de café y relajación" [style]="{ width: '360px' }">
+            <ng-template pTemplate="header">
+                <img alt="Cafetería" src="https://cdn.pixabay.com/photo/2016/08/04/18/16/coffee-1569682_1280.jpg" />
+            </ng-template>
+            <p>
+                En Coffee and Tea, nos apasiona ofrecerte una experiencia única con cada taza. Ven a disfrutar de un
+                ambiente relajado y cálido mientras degustas los mejores cafés y tés.
+            </p>
+
+            <div class="more-info-btn">
+                <button pButton pRipple label="Quienes somos" routerLink="/quienesomos"
+                    class="p-button p-component p-button-outlined"
+                    style="background-color: rgb(48, 68, 75);color:white"></button>
+            </div>
+
+        </p-card>
+    </div>
+
+</div>
+
+<div class="comentarios">
+    <p-carousel [value]="comments" [numVisible]="1" [numScroll]="1" circular="true" autoplay="true"
+        [style]="{ 'max-width': '800px', 'margin': '0 auto' }">
+        <ng-template pTemplate="item" let-comment>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>{{ comment.text }}</p>
+                </div>
+                <div class="testimonial-author">
+                    <img [src]="comment.authorImage" alt="author" class="author-image" />
+                    <div class="author-name">{{ comment.author }}</div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+    <div class="more-info-btn">
+        <button pButton pRipple label="Conoce más de nosotros" routerLink="/quienesomos"
+            class="p-button p-component p-button-outlined"></button>
+    </div>
+
+</div>
+<!-- footer -->
+
+<p-footer class="footer">
+    <div class="footer-content">
+        <div class="footer-text">
+            <p>&copy; 2024 Coffee and Tea. All rights reserved.</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="pi pi-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <i class="pi pi-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <i class="pi pi-instagram"></i>
+            </a>
+        </div>
+    </div>
+</p-footer>

@@ -1,0 +1,317 @@
+/* Carrusel general */
+.p-carousel-content {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    width: 100%;
+    height: 70vh;
+
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.product-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Añadir espaciado debajo de la imagen */
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+/* Responsivo para dispositivos pequeños */
+@media (max-width: 768px) {
+    .product-item {
+        margin: 0.5rem;
+        /* Espacio entre los productos */
+    }
+
+    .product-item img {
+        height: auto;
+        /* La altura se ajusta automáticamente según el ancho */
+    }
+
+    .p-carousel-content {
+        padding: 1rem;
+    }
+}
+
+/* Responsivo para dispositivos más pequeños */
+@media (max-width: 480px) {
+    .product-item img {
+        height: auto;
+    }
+
+    .product-item {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Estilos para el primer contenedor */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    gap: 5px;
+    padding: 10px;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.image {
+    width: 90%;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.text-section {
+    flex: 1;
+    max-width: 500px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.text-section ul {
+    margin-top: 0;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.text-section li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/*Estilos de las tarjetas*/
+.cards {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    /* Reducir el espacio entre las cards */
+    flex-wrap: wrap;
+    padding: 3em;
+    margin: 1em;
+}
+
+.card {
+    flex: 1 1 50%;
+    border-radius: 3em;
+    max-width: 360px;
+}
+
+/*estilos matrices*/
+.section-icons {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    overflow-x: auto;
+}
+
+.service-box {
+    background: rgb(48, 68, 75);
+    width: 15%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 0 0 auto;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    font-size: 2rem;
+    color: rgb(245, 245, 245);
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: rgb(188, 183, 183);
+}
+
+.parrafo {
+    font-size: 0.9rem;
+    color: rgb(210, 210, 210);
+}
+
+/*comentarios*/
+.comentarios {
+    width: 100%;
+    justify-content: center;
+    padding: 15px;
+    background: rgb(48, 68, 75);
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-content p {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.author-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.more-info-btn {
+    text-align: center;
+    margin-top: 30px;
+    /* Asegúrate de que haya suficiente espacio entre el carrusel y el botón */
+}
+
+.more-info-btn button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #f1eeed;
+    /* Un color cálido para que destaque */
+    color: rgb(56, 54, 54);
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.more-info-btn button:hover {
+    background-color: #aff7c8;
+    /* Cambio de color en hover para darle un efecto interactivo */
+}
+
+/*footer*/
+
+.footer {
+    width: 100%;
+    color: #6B7280;
+    padding: 20px 0 0 20px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content {
+    background-color: #f8f3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: rgb(21, 19, 19);
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .footer-text {
+        margin-bottom: 10px;
+    }
+}
