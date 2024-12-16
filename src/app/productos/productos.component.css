@@ -358,3 +358,122 @@ h3 {
         margin-bottom: 10px;
     }
 }
+
+
+/* Ajustes para móviles grandes (máx. 576px) */
+@media (max-width: 576px) {
+
+
+    .text-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-section p,
+    .text-section li {
+        font-size: 0.8rem;
+    }
+
+    .service-box {
+        width: 90%;
+        /* Cada caja ocupa todo el ancho disponible */
+    }
+
+    .section-icons {
+        gap: 1rem;
+    }
+
+    .contenedor_cards {
+        padding: 10px;
+    }
+}
+
+/* Ajustes para móviles muy pequeños (máx. 400px) */
+@media (max-width: 400px) {
+
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1.2rem;
+        /* Reducimos el tamaño de todos los títulos */
+    }
+
+    .text-section p,
+    .text-section li {
+        font-size: 0.7rem;
+    }
+
+    .service-box {
+        padding: 0.5rem;
+        /* Reduce el padding interno */
+    }
+}
+
+@media (max-width: 992px) {
+    .image {
+        width: 80%;
+        /* Reduce el ancho de la imagen */
+        height: 40vh;
+        /* Reduce la altura en proporción */
+    }
+}
+
+/* Pantallas pequeñas (máx. 768px) */
+@media (max-width: 768px) {
+    .image-section {
+        width: 70%;
+        /* La imagen ocupa menos espacio horizontal */
+        height: 150px;
+        /* Ajusta la altura automáticamente */
+    }
+}
+
+/* Móviles grandes (máx. 576px) */
+@media (max-width: 576px) {
+    .image-section {
+        width: 100%;
+        /* La imagen ocupa todo el ancho del contenedor */
+        height: 150px;
+        /* Mantiene la proporción correcta */
+    }
+}
+
+/* Móviles pequeños (máx. 400px) */
+@media (max-width: 400px) {
+    .image {
+        width: 100%;
+        /* Ocupa todo el ancho */
+        height: 150px;
+        /* La altura se adapta proporcionalmente */
+        border-radius: 5px;
+        /* Reduce el radio de los bordes */
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+        height: auto;
+        /* El contenedor adapta su altura al contenido */
+    }
+
+    .image {
+        height: 25vh;
+        /* Altura reducida solo en pantallas pequeñas */
+    }
+}
+
+/* Móviles pequeños (máx. 400px) */
+@media (max-width: 400px) {
+    .container {
+        padding: 5px;
+        height: auto;
+    }
+
+    .image {
+        height: 20vh;
+        /* Altura aún más reducida para pantallas muy pequeñas */
+    }
+}

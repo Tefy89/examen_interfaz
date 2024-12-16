@@ -284,3 +284,172 @@ h2 {
         margin-bottom: 10px;
     }
 }
+
+
+/* Para dispositivos con un ancho máximo de 1200px (pantallas medianas) */
+@media (max-width: 1200px) {
+
+    .mision,
+    .vision {
+        width: 48%;
+        /* Se mantiene un diseño de dos columnas, pero ajustado */
+    }
+
+    .image-gallery img {
+        width: 45%;
+        /* Ajuste de tamaño para imágenes en galerías */
+    }
+
+    .ubicacion {
+        padding: 30px;
+        /* Reducimos el padding para pantallas más pequeñas */
+    }
+}
+
+/* Para dispositivos con un ancho máximo de 992px (pantallas tablet en posición horizontal) */
+@media (max-width: 992px) {
+
+    .mision,
+    .vision {
+        width: 100%;
+        /* Ocupan el ancho completo */
+        margin-bottom: 20px;
+    }
+
+    .ubicacion-contenido {
+        flex-direction: column;
+        /* Coloca elementos uno debajo del otro */
+    }
+
+    .direccion {
+        text-align: center;
+        /* Centra el contenido */
+    }
+
+    .image-gallery img {
+        width: 48%;
+        /* Ajustamos ligeramente el tamaño de las imágenes */
+    }
+}
+
+/* Para dispositivos con un ancho máximo de 768px (pantallas tablet en posición vertical) */
+@media (max-width: 768px) {
+    .mision-valores {
+        flex-direction: column;
+        /* Se colocan las secciones una debajo de otra */
+        align-items: center;
+    }
+
+    .ubicacion-contenido {
+        flex-direction: column;
+        /* Acomoda la dirección y el mapa en una sola columna */
+        align-items: center;
+    }
+
+    .direccion {
+        text-align: center;
+    }
+
+    .image-gallery img {
+        width: 90%;
+        /* Las imágenes ocupan casi todo el ancho */
+        height: auto;
+        /* Mantenemos proporciones */
+    }
+
+    .social-icons i {
+        font-size: 2rem;
+        /* Reducimos el tamaño de los íconos sociales */
+    }
+
+
+}
+
+/* Para dispositivos con un ancho máximo de 576px (pantallas de móvil pequeñas) */
+@media (max-width: 576px) {
+
+    .mision-content p,
+    .vision-content p {
+        font-size: 0.9rem;
+        /* Reducimos el tamaño del texto */
+    }
+
+    .image-gallery img {
+        width: 80%;
+        /* Las imágenes ocupan el 100% del ancho */
+        height: auto;
+        /* Ajustamos la altura */
+    }
+
+    .ubicacion {
+        padding: 20px;
+        /* Reducimos el padding */
+    }
+
+    .social-icons {
+        gap: 10px;
+        /* Reducimos el espacio entre los íconos sociales */
+    }
+
+
+}
+
+/* Para dispositivos con un ancho máximo de 400px (móviles muy pequeños) */
+@media (max-width: 400px) {
+
+    h1,
+    h2 {
+        font-size: 1.5rem;
+        /* Reducimos los títulos */
+    }
+
+    .mision h3,
+    .vision h3 {
+        font-size: 1.5rem;
+        /* Ajustamos los subtítulos */
+    }
+
+    .mision-content p,
+    .vision-content p {
+        font-size: 0.8rem;
+        /* Reducimos aún más el texto */
+    }
+
+
+}
+
+.image-gallery img {
+    width: 100%;
+    /* Por defecto, ocupa el ancho total del contenedor */
+    max-width: 400px;
+    /* Tamaño máximo que puede tener la imagen */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: cover;
+    /* Para evitar que se distorsionen las imágenes */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+    .image-gallery img {
+        max-width: 300px;
+        /* Ajusta el tamaño máximo en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-gallery img {
+        max-width: 200px;
+        /* Reduce aún más el tamaño en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .image-gallery img {
+        max-width: 100%;
+        /* Ocupará todo el ancho del contenedor */
+        width: 90%;
+        /* Agregamos un pequeño margen visual */
+    }
+}
