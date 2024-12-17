@@ -3,15 +3,18 @@ import { MenuItem } from 'primeng/api';
 
 import { TabMenuModule } from 'primeng/tabmenu';
 import { TableModule } from 'primeng/table';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-quienesomos',
   standalone: true,
-  imports: [TabMenuModule, TableModule],
+  imports: [TabMenuModule, TableModule, FormsModule, ReactiveFormsModule],
   templateUrl: './quienesomos.component.html',
   styleUrl: './quienesomos.component.css'
 })
 export class QuienesomosComponent {
+  profileForm!: FormGroup;
   items: MenuItem[] | undefined;
 
   ngOnInit() {
@@ -19,7 +22,18 @@ export class QuienesomosComponent {
       { label: 'Inicio', icon: 'pi pi-home', routerLink: '/inicio' },
       { label: 'Acerca de nosotros', icon: 'pi pi-chart-line', routerLink: '/quienesomos' },
       { label: 'Productos', icon: 'pi pi-list', routerLink: '/productos' },
-    ]
+    ];
+
+    this.profileForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      cedula: ['', Validators.required],
+      direccion: ['', Validators.required],
+      gender: ['', Validators.required],
+      message: ['', Validators.required],
+      agree: [false, Validators.requiredTrue] // Checkbox con validación
+    });
   }
 
   productos = [
@@ -29,4 +43,18 @@ export class QuienesomosComponent {
     { name: 'Café Americano', price: 3.0, inventoryStatus: 'En stock' },
     { name: 'Té Negro', price: 2.8, inventoryStatus: 'En stock' }
   ];
+
+  constructor(private fb: FormBuilder) { }
+
+
+
+  // Método para manejar el envío del formulario
+  onSubmit() {
+    if (this.profileForm.valid) {
+      console.log("Formulario enviado:", this.profileForm.value);
+    } else {
+      console.log("Formulario inválido");
+    }
+  }
 }
+
